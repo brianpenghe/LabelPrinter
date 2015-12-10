@@ -1,14 +1,23 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
+import sys
+import string
+
+if len(sys.argv) < 6:
+    print 'usage: python %s v6.5 3 v6.5mES p:15 Ram2014-05-28 ' % sys.argv[0]
+    sys.exit(1)
 
 # <codecell>
 #########Brian Peng He###########
-namePlease = "C2C12\\&(lncMyoD5H)\\&Peng 151209"
-idPlease = 'lncMyoD5H'
-RepeatTimes = 2
+namePlease = ""+ sys.argv[3] + "\\&(" + sys.argv[4] + ")\\&" + sys.argv[5]
+idPlease = sys.argv[1]
+RepeatTimes = int(sys.argv[2])
+if RepeatTimes < 1:
+    print 'RepeatTimes must be a positive integer'
+    sys.exit(1)
 
 import time
-#namePlease = "v6.5 mES\\&(p:15) 5x10E6 (Gutman M.)\\&Ram 2014-05-28"
+#namePlease = "v6.5mES\\&(p:15)\\&Ram2014-05-28"
 #idPlease = 'v6.5'
 #RepeatTimes = 8
 #########Brian Peng He###########
